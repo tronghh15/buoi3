@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bài 4</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<script>
+			function KiemTra()
+			{
+				var tdn=f1.TenDangNhap.value;
+				var mk=f1.Matkhau.value;
+				var xnmk=f1.XacNhanMatkhau.value;
+				
+				if(tdn == "" || mk == "" || xnmk == "")
+				{
+					alert('Các ô bắt buộc phải nhập');
+					return false;
+				}
+				
+				if(tdn.length <6)
+				{
+					alert('Tên đăng nhập phải từ 6 kí tự');
+					return false;
+				}
+				if(mk != xnmk)
+				{
+					alert('Mật khẩu xác nhận chưa đúng');
+					return false;
+				}
+				return true
+			}
+		</script>
+		<form name="f1">
+			<table>
+				<tr>
+					<td>Tên đăng nhập</td>
+					<td><input type ="text" name="TenDangNhap"> (Nhiều hơn 6 kí tự)</td>
+				</tr>
+				<tr>
+					<td>Mật khẩu</td>
+					<td><input type="password" name="Matkhau"></td>
+				</tr>
+				<tr>
+					<td>Nhập lại mật khẩu</td>
+					<td><input type="password" name="XacNhanMatkhau"></td>
+				</tr>				
+			</table>
+			<button type="submit" onclick="return KiemTra()">Kiểm tra</button>
+		</form>
+	</body>
+</html>

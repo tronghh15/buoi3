@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bài 5</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+	<div id="KetQua"></div>
+	<script>
+		function ThoiGian()
+		{
+			var t= new Date();
+			var gio = t.getHours();
+			var phut = t.getMinutes();
+			var giay = t.getSeconds();
+			
+			document.getElementById('KetQua').innerHTML('Bây giờ là '+gio+':'+phut+':'+giay+'');
+		}
+		setInterval(ThoiGian,1000);
+	</script>
+		
+	</body>
+</html>
